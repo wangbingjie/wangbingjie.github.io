@@ -67,9 +67,12 @@ $(function() {
 
 /***************** Nav Transformicon ******************/
 
-document.querySelector("#nav-toggle").addEventListener("click", function() {
-	this.classList.toggle("active");
-});
+var navToggle = document.querySelector("#nav-toggle");
+if (navToggle) {
+	navToggle.addEventListener("click", function() {
+		this.classList.toggle("active");
+	});
+}
 
 /***************** Overlays ******************/
 
