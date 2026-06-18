@@ -19,7 +19,8 @@
       <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
       <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
       <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+      <link rel="preload" as="image" href="img/avatar.png">
+      <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -30,22 +31,13 @@
       <link href="css/animate.css" rel="stylesheet">
     </head>
       <body id="top">
-        <header id="home">
-          <nav>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                  <nav class="pull">
-                    <ul class="top-nav">
-                      <li><a href="#intro">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#research">Research <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#life">Besides Physics <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </nav>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#intro">Intro</a>
+          <a href="#research">Research</a>
+          <a href="#pubs">Publications</a>
+          <a href="#press">Press</a>
+          <a href="#life">About me</a>
+        </nav>
 
         <section class="team text-center section-padding" id="intro">
           <div class="container">
@@ -117,64 +109,271 @@
                 In parallel, I have worked on and share a deep interest in <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...952L..10W/abstract" target="_blank">machine-learning-empowered inference techniques</a> and <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...987..184W/abstract" target="_blank">population models for star formation timescales</a>.<br><br>
                 My Ph.D. thesis centers on the <a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...885...57W/abstract" target="_blank">escape of ionizing radiation</a> and <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894..149W/abstract" target="_blank">galactic outflows</a> <a href="wang_aas_2021.pdf">(slides from my AAS dissertation talk)</a>. The former concerns the processes in early galaxies that enable a substantial fraction of their Lyman-continuum radiation to escape the dense interstellar medium, driving the cosmic reionization. The latter is on the physical processes governing starburst-driven outflows, which are often invoked as the principal feedback mechanism in models of galaxy formation and evolution.<br><br>
                 I have also collaborated on projects on early universe cosmology, such as understanding large-angle anomalies in the Cosmic Microwave Background and developing analysis pipelines for the <a href="https://sites.krieger.jhu.edu/class/" target="_blank">Cosmology Large Angular Scale Surveyor</a>.
-                <br><br><br>
-
-                <h1 class="arrow">Press</h1><br>
-                <p><font size="3"> &#8226; Media coverage of lead-author works:</font><br></p>
-                <p>
-                  <a href="https://skyandtelescope.org/uncategorized/trio-of-early-galaxies-test-our-ideas-of-cosmic-evolution/" target="_blank">Trio of early galaxies test our ideas of cosmic evolution; Sky & Telescope</a><br>
-                  <a href="https://aasnova.org/2024/06/25/too-many-stars-too-fast" target="_blank">Too many stars, too fast?; AAS NOVA research highlights</a><br>(<a href="https://www.psu.edu/news/research/story/tiny-bright-objects-discovered-dawn-universe-baffle-scientists/" target="_blank">see also the PSU release</a>; <a href="https://www.space.com/forbidden-black-holes-jwst-tiny-red-dots" target="_blank">Space.com,</a> <a href="https://www.independent.co.uk/space/nasa-james-webb-telescope-images-universe-b2572705.html" target="_blank">The Independent, ...</a>)<br>
-                  <a href="https://science.psu.edu/news/WangLeja11-2023" target="_blank">JWST discovery of the second- and fourth-most distant galaxies; PSU release</a> (<a href="https://www.space.com/james-webb-space-telescope-distant-galaxies" target="_blank">Space.com,</a> <a href="https://www.newsweek.com/giant-peanut-galaxy-discovered-33-billion-light-years-away-1843148" target="_blank">Newsweek,</a> <a href="https://www.dailymail.co.uk/sciencetech/article-12743647"target="_blank">Daily Mail, ...</a>)<br>
-                  <a href="https://science.psu.edu/news/Leja2-2023" target="_blank">JWST uncovers new details in Pandora’s Cluster; NASA/STScI/PSU release</a><br>
-                  [SII] deficiency and the leakage of ionizing radiation; AAS journal author series<br>
-                  <a href="https://aasnova.org/2020/08/07/tracing-gas-flows-out-of-star-forming-galaxies/" target="_blank">Tracing gas flows out of star-forming galaxies; AAS NOVA research highlights
-                  <br><br>
-                </p>
-
-                <p><font size="3"> &#8226; Expert comments for:</font><br></p>
-                <p>
-                  <a href="https://www.sciencefocus.com/news/supermassive-black-holes-dark-matter-parsec-problem" target="_blank">BBC,</a>
-                  <a href="https://www.newscientist.com/article/2437145-little-red-dot-galaxies-are-breaking-theories-of-cosmic-evolution" target="_blank">New Scientist,</a>
-                  <a href="https://www.npr.org/2025/09/18/nx-s1-5539527/this-week-in-science-mystery-dots-in-space-optical-illusions-and-octopus-arms" target="_blank">NPR,</a>
-                  <a href="https://skyandtelescope.org/astronomy-news/webb-telescope-finds-strangely-bright-galaxies-at-cosmic-dawn" target="_blank">Sky &amp; Telescope.</a>
-                  <br><br>
-                </p>
-
-                <p>&#8226; Selected other media coverage:</p>
-                <p>
-                  <a href="https://www.nasa.gov/missions/chandra/nasa-telescopes-discover-record-breaking-black-hole/" target="_blank">NASA telescopes discover record-breaking black hole; NASA release</a> (<a href="https://www.cnn.com/2023/11/07/world/most-distant-black-hole-webb-chandra-scn/index.html" target="_blank">CNN, </a>...</a>)<br>
-                  <a href="https://www.psu.edu/news/research/story/discovery-massive-early-galaxies-defies-prior-understanding-universe" target="_blank">Massive early galaxies defy prior understanding of the universe; NASA/Nature/ANU/PSU release</a> (<a href="https://www.cnn.com/2023/02/22/world/webb-telescope-massive-early-galaxies-scn/" target="_blank">CNN,</a> <a href="https://www.theguardian.com/science/2023/feb/22/universe-breakers-james-webb-telescope-detects-six-ancient-galaxies" target="_blank">the Guardian,</a> <a href="https://www.npr.org/2023/02/22/1158793897/webb-telescope-huge-early-galaxies-big-bang"target="_blank">NPR, ...</a>)
-                </p>
-                
             </p>
 
-          <section class="features text-center" id="pubs">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="features-wrapper">
-                  <div class="col-md-6 wp5 delay-05s">
-                    <img src="img/bb_rgb.png" width="250" height="250" alt="Little red dot composite, Wang et al 2024" loading="lazy" decoding="async">
-                    <!-- <div class="icon"> -->
-                      <!-- <i class="fa fa-laptop shadow"></i> -->
-                    <!-- </div> -->
-                    <h2><a href="https://ui.adsabs.harvard.edu/search/filter_doctype_facet_hier_fq_doctype=NOT&filter_doctype_facet_hier_fq_doctype=*%3A*&filter_doctype_facet_hier_fq_doctype=doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_doctype%7D&fq_database=(database%3Aastronomy)&fq_doctype=(*%3A*%20NOT%20doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22)&p_=0&q=%3D%20%20first_author%3A%22wang%2C%20bingjie%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">First-Author Publications</a></h2>
-                    <p><a href="https://ui.adsabs.harvard.edu/search/filter_doctype_facet_hier_fq_doctype=NOT&filter_doctype_facet_hier_fq_doctype=*%3A*&filter_doctype_facet_hier_fq_doctype=doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_doctype%7D&fq_database=(database%3Aastronomy)&fq_doctype=(*%3A*%20NOT%20doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22)&p_=0&q=%3D%20%20first_author%3A%22wang%2C%20bingjie%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">14 papers (as of 02/2026; click here to view in ADS)</a></p>
-                    <p>Img: composite image of a "little red dot", at spec-z=8.35, exhibiting a spectral break resembling a signature of old stars in the young universe; <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...969L..13W/abstract" target="_blank">Wang et al 2024</a>.</p>
+            <div class="papers-section" id="pubs">
+              <h1 class="arrow arrow-lg">Publications</h1>
+
+              <div class="papers-metrics">
+                <div class="metric-block">
+                  <p class="metric-block-label"><a href="https://ui.adsabs.harvard.edu/search/filter_doctype_facet_hier_fq_doctype=NOT&filter_doctype_facet_hier_fq_doctype=*%3A*&filter_doctype_facet_hier_fq_doctype=doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_doctype%7D&fq_database=(database%3Aastronomy)&fq_doctype=(*%3A*%20NOT%20doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22)&p_=0&q=%3D%20%20first_author%3A%22wang%2C%20bingjie%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">First-author</a></p>
+                  <div class="metric-block-row">
+                    <div class="metric-cell"><span class="metric-num">14</span><span class="metric-label">Papers</span></div>
+                    <div class="metric-cell"><span class="metric-num">&gt; 900</span><span class="metric-label">Citations</span></div>
+                    <div class="metric-cell"><span class="metric-num">12</span><span class="metric-label">h-index</span></div>
                   </div>
-                  <div class="col-md-6 wp5 delay-1s">
-                    <img src="img/z12_f277w_cutout.png" width="250" height="250" alt="Cutout of a z=12.4 galaxy, Wang et al 2023" loading="lazy" decoding="async">
-                    <h2><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%3Dauthor%3A(%22Wang%2C%20Bingjie%22)%20AND%20pubdate%3A%5B2015-01%20TO%20*%5D%20AND%20collection%3Aastronomy%20OR%20orcid%3A0000-0001-9269-5046&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">All Publications</a></h2>
-                    <p><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%3Dauthor%3A(%22Wang%2C%20Bingjie%22)%20AND%20pubdate%3A%5B2015-01%20TO%20*%5D%20AND%20collection%3Aastronomy%20OR%20orcid%3A0000-0001-9269-5046&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">100 in total (as of 02/2026; click here to view in ADS)</a></p>
-                    <p>Img: cutout of one of the most distant galaxies ever observed, at spec-z = 12.4; <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...957L..34W/abstract" target="_blank">Wang et al 2023</a>.</p>
+                </div>
+                <div class="metric-block">
+                  <p class="metric-block-label"><a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%3Dauthor%3A(%22Wang%2C%20Bingjie%22)%20AND%20pubdate%3A%5B2015-01%20TO%20*%5D%20AND%20collection%3Aastronomy%20OR%20orcid%3A0000-0001-9269-5046&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">All publications</a></p>
+                  <div class="metric-block-row">
+                    <div class="metric-cell"><span class="metric-num">102</span><span class="metric-label">Papers</span></div>
+                    <div class="metric-cell"><span class="metric-num">&gt; 8200</span><span class="metric-label">Citations</span></div>
+                    <div class="metric-cell"><span class="metric-num">49</span><span class="metric-label">h-index</span></div>
                   </div>
-                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <p class="papers-metrics-note">
+                as of 06/2026 &middot;
+                <a href="https://ui.adsabs.harvard.edu/search/filter_doctype_facet_hier_fq_doctype=NOT&filter_doctype_facet_hier_fq_doctype=*%3A*&filter_doctype_facet_hier_fq_doctype=doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_doctype%7D&fq_database=(database%3Aastronomy)&fq_doctype=(*%3A*%20NOT%20doctype_facet_hier%3A%221%2FNon-Article%2FAbstract%22)&p_=0&q=%3D%20%20first_author%3A%22wang%2C%20bingjie%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank">first-author on ADS</a> &middot;
+                <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq_database=(database%3Aastronomy)&q=%3Dauthor%3A(%22Wang%2C%20Bingjie%22)%20AND%20pubdate%3A%5B2015-01%20TO%20*%5D%20AND%20collection%3Aastronomy%20OR%20orcid%3A0000-0001-9269-5046&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">all publications on ADS</a>
+              </p>
+
+              <h2 class="papers-subhead">Selected First-Author Papers</h2>
+
+              <div class="papers-group">
+                <p class="papers-group-label">Little red dots</p>
+                <div class="papers-grid">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ..1003...10W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2026</span>
+                      <span class="paper-stamp">Missing hard photons</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2026</span>
+                      <span class="paper-title">The Missing Hard Photons of Little Red Dots: Their Incident Ionizing Spectra Resemble Massive Stars</span>
+                      <span class="paper-teaser">Low He II / Hbeta.</span>
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...984..121W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2025</span>
+                      <span class="paper-stamp">RUBIES-BLAGN-1</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2025</span>
+                      <span class="paper-title">RUBIES: JWST/NIRSpec Confirmation of an Infrared-luminous, Broad-line Little Red Dot with an Ionized Outflow</span>
+                      <span class="paper-teaser">An unusually bright little red dot at z = 3.1 with no hot dust emission.</span>
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...969L..13W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2024</span>
+                      <span class="paper-stamp">Universe breakers</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJL &middot; 2024</span>
+                      <span class="paper-title">RUBIES: Evolved Stellar Populations with Extended Formation Histories at z ∼ 7─8 in Candidate Massive Galaxies Identified with JWST/NIRSpec</span>
+                      <span class="paper-teaser">Galaxy/black-hole decomposition modeling.</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="papers-group">
+                <p class="papers-group-label">SED modeling</p>
+                <div class="papers-grid">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...987..184W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2025</span>
+                      <span class="paper-stamp">Population model</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2025</span>
+                      <span class="paper-title">Population Models for Star Formation Timescales in Early Galaxies: The First Step toward Solving Outshining in Star Formation History Inference</span>
+                      <!-- <span class="paper-teaser">Population Models to recover the diversity of galaxy timescales.</span> -->
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...963...74W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2024</span>
+                      <span class="paper-stamp">SPS systematics</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2024</span>
+                      <span class="paper-title">Quantifying the Effects of Known Unknowns on Inferred High-redshift Galaxy Properties: Burstiness, IMF, and Nebular Physics</span>
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...944L..58W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2023</span>
+                      <span class="paper-stamp">Prospector-&beta;</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJL &middot; 2023</span>
+                      <span class="paper-title">Inferring More from Less: Prospector as a Photometric Redshift Engine in the Era of JWST</span>
+                      <!-- <span class="paper-teaser">Observationally driven priors.</span> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="papers-group">
+                <p class="papers-group-label">Extragalactic survey</p>
+                <div class="papers-grid">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2024ApJS..270...12W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2024</span>
+                      <span class="paper-stamp">UNCOVER SPS</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJS &middot; 2024</span>
+                      <span class="paper-title">The UNCOVER Survey: A First-look HST+JWST Catalog of Galaxy Redshifts and Stellar Population Properties Spanning 0.2 ≲ z ≲ 15</span>
+                      <!-- <span class="paper-teaser">Public stellar population catalogs.</span> -->
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...957L..34W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2023</span>
+                      <span class="paper-stamp">z &gt; 12 galaxies</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJL &middot; 2023</span>
+                      <span class="paper-title">UNCOVER: Illuminating the Early Universe-JWST/NIRSpec Confirmation of z > 12 Galaxies</span>
+                      <!-- <span class="paper-teaser">NIRSpec confirmation of distant galaxies.</span> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="papers-group">
+                <p class="papers-group-label">ML inference</p>
+                <div class="papers-grid">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...952L..10W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2023</span>
+                      <span class="paper-stamp">SBI</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJL &middot; 2023</span>
+                      <span class="paper-title">SBI++: Flexible, Ultra-fast Likelihood-free Inference Customized for Astronomical Applications</span>
+                      <!-- <span class="paper-teaser">Reduces per-galaxy SED-fitting cost by four orders of magnitude with no loss in posterior fidelity.</span> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="papers-group">
+                <p class="papers-group-label">Thesis</p>
+                <div class="papers-grid">
+                  <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...894..149W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2020</span>
+                      <span class="paper-stamp">Outflows</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2020</span>
+                      <span class="paper-title">A Systematic Study of Galactic Outflows via Fluorescence Emission: Implications for Their Size and Structure</span>
+                      <!-- <span class="paper-teaser">Connects driving energetics to galaxy properties using ultraviolet absorption-line diagnostics.</span> -->
+                    </div>
+                  </a>
+                  <a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...885...57W/abstract" target="_blank" class="paper-tile">
+                    <div class="paper-fig">
+                      <span class="paper-code">Wang+ 2019</span>
+                      <span class="paper-stamp">[SII] deficiency</span>
+                    </div>
+                    <div class="paper-meta">
+                      <span class="paper-venue">ApJ &middot; 2019</span>
+                      <span class="paper-title">A New Technique for Finding Galaxies Leaking Lyman-continuum Radiation: [S II]-deficiency</span>
+                      <!-- <span class="paper-teaser">Identifies a low-redshift analog of the ionizing-photon producers that reionized the early universe.</span> -->
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-          <br>
-          </section>
+
+            <br><br>
+
+            <p align="justify">
+                <h1 class="arrow arrow-lg" id="press">Press</h1>
+
+                <div class="press-section">
+
+                  <h2 class="press-group-label">Media coverage of lead-author work</h2>
+                  <ul class="press-list">
+
+                    <li class="press-item">
+                      <a href="https://skyandtelescope.org/uncategorized/trio-of-early-galaxies-test-our-ideas-of-cosmic-evolution/" target="_blank" class="press-headline">Trio of early galaxies test our ideas of cosmic evolution</a>
+                      <span class="press-outlet">Sky &amp; Telescope</span>
+                    </li>
+
+                    <li class="press-item">
+                      <a href="https://aasnova.org/2024/06/25/too-many-stars-too-fast" target="_blank" class="press-headline">Too many stars, too fast?</a>
+                      <span class="press-outlet">AAS NOVA, 2024</span>
+                      <span class="press-also">also:
+                        <a href="https://www.psu.edu/news/research/story/tiny-bright-objects-discovered-dawn-universe-baffle-scientists/" target="_blank">PSU release</a> &middot;
+                        <a href="https://www.space.com/forbidden-black-holes-jwst-tiny-red-dots" target="_blank">Space.com</a> &middot;
+                        <a href="https://www.independent.co.uk/space/nasa-james-webb-telescope-images-universe-b2572705.html" target="_blank">The Independent</a>
+                      </span>
+                    </li>
+
+                    <li class="press-item">
+                      <a href="https://science.psu.edu/news/WangLeja11-2023" target="_blank" class="press-headline">JWST discovery of the second- and fourth-most distant galaxies</a>
+                      <span class="press-outlet">Penn State, 2023</span>
+                      <span class="press-also">also:
+                        <a href="https://www.space.com/james-webb-space-telescope-distant-galaxies" target="_blank">Space.com</a> &middot;
+                        <a href="https://www.newsweek.com/giant-peanut-galaxy-discovered-33-billion-light-years-away-1843148" target="_blank">Newsweek</a> &middot;
+                        <a href="https://www.dailymail.co.uk/sciencetech/article-12743647" target="_blank">Daily Mail</a>
+                      </span>
+                    </li>
+
+                    <li class="press-item">
+                      <a href="https://science.psu.edu/news/Leja2-2023" target="_blank" class="press-headline">JWST uncovers new details in Pandora&rsquo;s Cluster</a>
+                      <span class="press-outlet">NASA / STScI / PSU, 2023</span>
+                    </li>
+
+                    <li class="press-item">
+                      <span class="press-headline">[SII] deficiency and the leakage of ionizing radiation</span>
+                      <span class="press-outlet">AAS journal author series</span>
+                    </li>
+
+                    <li class="press-item">
+                      <a href="https://aasnova.org/2020/08/07/tracing-gas-flows-out-of-star-forming-galaxies/" target="_blank" class="press-headline">Tracing gas flows out of star-forming galaxies</a>
+                      <span class="press-outlet">AAS NOVA, 2020</span>
+                    </li>
+
+                  </ul>
+
+                  <h2 class="press-group-label">Expert commentary in</h2>
+                  <p class="press-expert-line">
+                    <a href="https://www.sciencefocus.com/news/supermassive-black-holes-dark-matter-parsec-problem" target="_blank">BBC</a><a href="https://www.newscientist.com/article/2437145-little-red-dot-galaxies-are-breaking-theories-of-cosmic-evolution" target="_blank">New Scientist</a><a href="https://www.npr.org/2025/09/18/nx-s1-5539527/this-week-in-science-mystery-dots-in-space-optical-illusions-and-octopus-arms" target="_blank">NPR</a><a href="https://skyandtelescope.org/astronomy-news/webb-telescope-finds-strangely-bright-galaxies-at-cosmic-dawn" target="_blank">Sky &amp; Telescope</a>
+                  </p>
+
+                  <h2 class="press-group-label">Selected other coverage</h2>
+                  <ul class="press-list">
+
+                    <li class="press-item">
+                      <a href="https://www.nasa.gov/missions/chandra/nasa-telescopes-discover-record-breaking-black-hole/" target="_blank" class="press-headline">NASA telescopes discover record-breaking black hole</a>
+                      <span class="press-outlet">NASA, 2023</span>
+                      <span class="press-also">also:
+                        <a href="https://www.cnn.com/2023/11/07/world/most-distant-black-hole-webb-chandra-scn/index.html" target="_blank">CNN</a>
+                      </span>
+                    </li>
+
+                    <li class="press-item">
+                      <a href="https://www.psu.edu/news/research/story/discovery-massive-early-galaxies-defies-prior-understanding-universe" target="_blank" class="press-headline">Massive early galaxies defy prior understanding of the universe</a>
+                      <span class="press-outlet">NASA / Nature / PSU, 2023</span>
+                      <span class="press-also">also:
+                        <a href="https://www.cnn.com/2023/02/22/world/webb-telescope-massive-early-galaxies-scn/" target="_blank">CNN</a> &middot;
+                        <a href="https://www.theguardian.com/science/2023/feb/22/universe-breakers-james-webb-telescope-detects-six-ancient-galaxies" target="_blank">The Guardian</a> &middot;
+                        <a href="https://www.npr.org/2023/02/22/1158793897/webb-telescope-huge-early-galaxies-big-bang" target="_blank">NPR</a>
+                      </span>
+                    </li>
+
+                  </ul>
+
+                </div>
+                
+            </p>
 
       </section>
 
@@ -235,9 +434,7 @@
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script defer src="js/waypoints.min.js"></script>
-        <script defer src="js/bootstrap.min.js"></script>
         <script defer src="js/scripts.js"></script>
         <script defer src="js/jquery.flexslider.js"></script>
-        <script defer src="js/modernizr.js"></script>
       </body>
     </html>
