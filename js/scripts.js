@@ -1,75 +1,41 @@
-/***************** Waypoints ******************/
+/***************** Scroll-triggered fade-ins ******************/
+// Adding class wp1–wp6 to an element fades it in when it scrolls into view.
+// `offset` is how far down the viewport the element's top must reach (like the old Waypoints offset).
 
-$(document).ready(function() {
+(function () {
+	var effects = {
+		wp1: ['fadeInLeft', '75%'],
+		wp2: ['fadeInUp', '75%'],
+		wp3: ['fadeInDown', '55%'],
+		wp4: ['fadeInDown', '75%'],
+		wp5: ['fadeInUp', '75%'],
+		wp6: ['fadeInDown', '75%']
+	};
 
-	$('.wp1').waypoint(function() {
-		$('.wp1').addClass('animated fadeInLeft');
-	}, {
-		offset: '75%'
-	});
-	$('.wp2').waypoint(function() {
-		$('.wp2').addClass('animated fadeInUp');
-	}, {
-		offset: '75%'
-	});
-	$('.wp3').waypoint(function() {
-		$('.wp3').addClass('animated fadeInDown');
-	}, {
-		offset: '55%'
-	});
-	$('.wp4').waypoint(function() {
-		$('.wp4').addClass('animated fadeInDown');
-	}, {
-		offset: '75%'
-	});
-	$('.wp5').waypoint(function() {
-		$('.wp5').addClass('animated fadeInUp');
-	}, {
-		offset: '75%'
-	});
-	$('.wp6').waypoint(function() {
-		$('.wp6').addClass('animated fadeInDown');
-	}, {
-		offset: '75%'
-	});
+	Object.keys(effects).forEach(function (cls) {
+		var anim = effects[cls][0];
+		var offset = effects[cls][1];
+		var els = document.querySelectorAll('.' + cls);
+		if (!els.length) return;
 
-});
+		var reveal = function (el) { el.classList.add('animated', anim); };
 
-/***************** Flexsliders ******************/
-
-$(window).load(function() {
-
-	$('#portfolioSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: false,
-		pauseOnHover: true,
-		start: function() {
-			$.waypoints('refresh');
+		if (!('IntersectionObserver' in window)) {
+			els.forEach(reveal);
+			return;
 		}
-	});
 
-	$('#servicesSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: true,
-		pauseOnHover: true,
-		start: function() {
-			$.waypoints('refresh');
-		}
-	});
+		var bottomMargin = '-' + (100 - parseFloat(offset)) + '%';
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				// Reveal once the element enters the trigger zone or has already been scrolled past.
+				if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+					reveal(entry.target);
+					io.unobserve(entry.target);
+				}
+			});
+		}, { rootMargin: '0px 0px ' + bottomMargin + ' 0px' });
 
-	$('#teamSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: true,
-		pauseOnHover: true,
-		start: function() {
-			$.waypoints('refresh');
-		}
+		els.forEach(function (el) { io.observe(el); });
 	});
-
-});
+})();

@@ -1,0 +1,29 @@
+name: Update ADS citations
+
+on:
+  schedule:
+    - cron: "0 12 15 * *"   # 15th of each month, 12:00 UTC
+  workflow_dispatch:         # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Refresh metrics from ADS
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_TOKEN }}
+        run: python3 scripts/update_ads.py index.html
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update ADS citation counts"
+          git push
